@@ -232,3 +232,28 @@ document.addEventListener("DOMContentLoaded", () => {
     toastTimer = setTimeout(() => toast.classList.remove("show"), 3200);
   }
 });
+const slider = document.querySelector(".gbp-slider");
+const nextBtn = document.querySelector(".gbp-next");
+const prevBtn = document.querySelector(".gbp-prev");
+
+
+// Next Image
+nextBtn.addEventListener("click", function () {
+
+  slider.scrollBy({
+    left: slider.clientWidth,
+    behavior: "smooth"
+  });
+
+});
+
+
+// Previous Image
+prevBtn.addEventListener("click", function () {
+
+  slider.scrollBy({
+    left: -slider.clientWidth,
+    behavior: "smooth"
+  });
+
+});
